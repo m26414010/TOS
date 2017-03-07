@@ -1,0 +1,6 @@
+dennis@dennis-VirtualBox:~$ cp $HOME/proyek/rumah[15] $home/proyek/rumahan
+cp: target '/proyek/rumahan' is not a directory
+dennis@dennis-VirtualBox:~$ cp $HOME/proyek/rumah[15] $HOME/proyek/rumahan
+dennis@dennis-VirtualBox:~$ cd proyek/rumahan
+dennis@dennis-VirtualBox:~/proyek/rumahan$ ls
+dennis  rumah1  rumah5
