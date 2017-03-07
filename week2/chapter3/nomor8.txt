@@ -1,0 +1,16 @@
+dennis@dennis-VirtualBox:~/Downloads$ echo $HOSTNAME
+dennis-VirtualBox
+dennis@dennis-VirtualBox:~/Downloads$ ECHO $USERNAME
+ECHO: command not found
+dennis@dennis-VirtualBox:~/Downloads$ echo $USERNAME
+
+dennis@dennis-VirtualBox:~/Downloads$ echo%shell
+echo%shell: command not found
+dennis@dennis-VirtualBox:~/Downloads$ echo $SHELL
+/bin/bash
+dennis@dennis-VirtualBox:~/Downloads$ echo $HOME
+/home/dennis
+dennis@dennis-VirtualBox:~/Downloads$ echo $USERNAME
+
+dennis@dennis-VirtualBox:~/Downloads$ 
+
