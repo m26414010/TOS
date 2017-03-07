@@ -1,0 +1,6 @@
+dennis@dennis-VirtualBox:~/proyek/rumahan$ cd
+dennis@dennis-VirtualBox:~$ cd
+dennis@dennis-VirtualBox:~$ rm -rf proyek
+dennis@dennis-VirtualBox:~$ ls
+bashrc   Documents  examples.desktop  Pictures  Public     Videos
+Desktop  Downloads  Music             projects  Templates
