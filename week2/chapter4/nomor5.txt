@@ -1,0 +1,15 @@
+dennis@dennis-VirtualBox:~$ ls -R $HOME/proyek/ ¦ less
+ls: cannot access '¦': No such file or directory
+ls: cannot access 'less': No such file or directory
+/home/dennis/proyek/:
+rumah1  rumah2  rumah3  rumah4  rumah5  rumah6  rumah7  rumah8  rumah9  rumahan
+
+/home/dennis/proyek/rumahan:
+dennis  rumah1  rumah5
+
+/home/dennis/proyek/rumahan/dennis:
+baru
+
+/home/dennis/proyek/rumahan/dennis/baru:
+rumahpohon.txt
+dennis@dennis-VirtualBox:~$ 
