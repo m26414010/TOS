@@ -1,0 +1,1 @@
+dennis@dennis-VirtualBox:~$ cp -ra /usr/share/doc/initscripts*/ ~/projects/
