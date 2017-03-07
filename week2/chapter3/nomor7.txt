@@ -1,0 +1,2 @@
+dennis@dennis-VirtualBox:~/Downloads$ echo "Today is" $(date '+%A, %B %d, %y')
+Today is Selasa, Maret 07, 17
