@@ -1,0 +1,11 @@
+ennis@dennis-VirtualBox:~/projects$ chmod -R a-w $HOME/projects/
+dennis@dennis-VirtualBox:~/projects$ ls -al
+total 24
+dr-xr-xr-x  3 dennis dennis 4096 Mar  8 01:01 .
+drwxr-xr-x 19 dennis dennis 4096 Mar  8 00:59 ..
+lrwxrwxrwx  1 dennis dennis   37 Mar  7 22:34 changelog.Debian.gz -> ../sysvinit-utils/changelog.Debian.gz
+-r--r--r--  1 dennis dennis 1434 Jan 20  2016 copyright
+dr--r-----  2 dennis dennis 4096 Mar  8 01:01 house2
+-r--r--r--  1 dennis dennis  921 Jan 20  2016 NEWS.Debian.gz
+-r--r--r--  1 dennis dennis  701 Peb  5  2016 README.Debian
+dennis@dennis-VirtualBox:~/projects$ 
