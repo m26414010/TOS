@@ -1,0 +1,16 @@
+dennis@dennis-VirtualBox:~$ man -k
+apropos what?
+dennis@dennis-VirtualBox:~$ man -k ^mount
+gvfs-mount (1)       - Mounts the locations
+mmount (1)           - mount an MSDOS disk
+mount (2)            - mount filesystem
+mount (8)            - mount a filesystem
+mount.fuse (8)       - format and options for the fuse file systems
+mount.lowntfs-3g (8) - Third Generation Read/Write NTFS Driver
+mount.ntfs (8)       - Third Generation Read/Write NTFS Driver
+mount.ntfs-3g (8)    - Third Generation Read/Write NTFS Driver
+mountall (8)         - Mount filesystems during boot
+mounted (7)          - event signalling that a filesystem has been mounted
+mounting (7)         - event signalling that a filesystem is mounting
+mountpoint (1)       - see if a directory or file is a mountpoint
+systemd.mount (5)    - Mount unit configuration
