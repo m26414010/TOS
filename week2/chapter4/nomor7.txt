@@ -1,0 +1,9 @@
+dennis@dennis-VirtualBox:~/proyek$ mv rumah{4,5} $HOME/proyek/rumahan
+dennis@dennis-VirtualBox:~/proyek$ cd
+dennis@dennis-VirtualBox:~$ cd proyek/
+dennis@dennis-VirtualBox:~/proyek$ ls
+rumah6  rumah7  rumah8  rumah9  rumahan
+dennis@dennis-VirtualBox:~/proyek$ cd rumahan/
+dennis@dennis-VirtualBox:~/proyek/rumahan$ ls
+dennis  rumah1  rumah4  rumah5
+dennis@dennis-VirtualBox:~/proyek/rumahan$ 
