@@ -1,0 +1,21 @@
+Linux bible
+
+Linux merupakan teknologi perkembangan penting di abad ke 21
+Linux menjadi sebuah landasan bagi berbagai aplikasi terkemuka yang beredar saat ini, seperti Google Chrome yang memiliki dasar LinuxOS. juga seperti AndroidOS yang memiliki dasar LinuxOS.
+facebook juga menggunakan sesuatu yang disebut LAMP stack(Linux, Apache web server,  MySQL database, dan PHP web scripting language) - semuanya merupakan proyek open source. pendekatan tersebut membuat sebuah pembuatan code untuk menghasilkan aplikasi yang bernama facebook tersebut menjadi kenyataan dan menjadi dikenal secara luas oleh masyarakat dunia.
+linux merupakan sebuah sistem operasi(OS). OS memanage komputer dan menjalankan aplikasi yang ingin kita jalankan. linux dan OS lain yang mirip memiliki kemampuan sebagai berikut:
+- deteksi dan mempersiapkan hardware
+- memanage proses
+- memanage pemakaian RAM
+- memberikan User interface
+- mengatur filesystem
+- menyediakan akses user dan autentikasi
+- menawarkan utilitas administratif
+- memulai layanan
+- alat pemrograman
+
+sistem linux modern saat ini bisa melakukan lebih darpada yang ada saat era UNIX dahulu seperti:
+- clustering : menjalankan beberapa sistem secara bersamaan
+- virtualisai : resouce yang tesedia bisa dimanage dengan lebih efisien untuk menjalankan virtualisasinya
+- real time computing : process dengan prioritas tinggi bisa diharapkan untuk keluar dengan cepat dan terprediksi.
+- specialised storage : metode menyimpan yang tidak hanya pada HDD, bisa juga pada interface storage yang terspesialisasi maupun local.
