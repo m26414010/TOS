@@ -1,0 +1,14 @@
+dennis@dennis-VirtualBox:~$ ls
+Desktop    Downloads         Music     Public     Videos
+Documents  examples.desktop  Pictures  Templates
+dennis@dennis-VirtualBox:~$ cd Do
+Documents/ Downloads/ 
+dennis@dennis-VirtualBox:~$ cd Downloads/
+dennis@dennis-VirtualBox:~/Downloads$ ls
+dennis@dennis-VirtualBox:~/Downloads$ mkdir hello
+dennis@dennis-VirtualBox:~/Downloads$ ls
+hello
+dennis@dennis-VirtualBox:~/Downloads$ rmdir hello
+dennis@dennis-VirtualBox:~/Downloads$ echo sabre
+sabre
+dennis@dennis-VirtualBox:~/Downloads$ 
