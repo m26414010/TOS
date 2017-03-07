@@ -1,0 +1,5 @@
+dennis@dennis-VirtualBox:~$ basename /usr/share/doc/.
+.
+dennis@dennis-VirtualBox:~$ 
+
+semua saya gunakan shortcut button TAB untuk mempercepat pengetikan dan memastikan kebenaran penulisan
