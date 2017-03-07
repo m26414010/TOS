@@ -1,0 +1,12 @@
+dennis@dennis-VirtualBox:~$ mkdir proyek
+dennis@dennis-VirtualBox:~$ touch rumah{1..9}
+dennis@dennis-VirtualBox:~$ ls
+bashrc     Downloads         Pictures  rumah1  rumah4  rumah7  Templates
+Desktop    examples.desktop  proyek    rumah2  rumah5  rumah8  Videos
+Documents  Music             Public    rumah3  rumah6  rumah9
+dennis@dennis-VirtualBox:~$ ls rumah{1..9}
+rumah1  rumah2  rumah3  rumah4  rumah5  rumah6  rumah7  rumah8  rumah9
+
+
+
+
