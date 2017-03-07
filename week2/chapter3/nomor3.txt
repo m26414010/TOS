@@ -1,0 +1,5 @@
+dennis@dennis-VirtualBox:~$ which mount
+/bin/mount
+dennis@dennis-VirtualBox:~$ whereis tracepath
+tracepath: /usr/bin/tracepath /usr/share/man/man8/tracepath.8.gz
+dennis@dennis-VirtualBox:~$ whereis tracepath
