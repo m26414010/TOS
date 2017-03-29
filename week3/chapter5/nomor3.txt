@@ -1,0 +1,2 @@
+m26414010@debian7:~$ vi tmp/services
+:g/tcp/s//WHATEVER/g
