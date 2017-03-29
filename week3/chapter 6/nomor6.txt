@@ -1,0 +1,3 @@
+dennis@dennis-VirtualBox:~$ gedit &
+
+dennis@dennis-VirtualBox:~$ kill -SIGSTOP 3542
