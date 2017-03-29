@@ -1,0 +1,10 @@
+m26414010@debian7:~$ find /tmp/FILES/ -type f -exec cp {} {}.mybackup \;
+cp: cannot create regular file `/tmp/FILES/DroidSansFallbackFull.ttf.mybackup.mybackup': Permission denied
+cp: cannot create regular file `/tmp/FILES/pst-mirror-doc.pdf.mybackup.mybackup': Permission denied
+cp: cannot create regular file `/tmp/FILES/com.ibm.icu-4.4.jar.mybackup': Permission denied
+cp: cannot create regular file `/tmp/FILES/DroidSansFallbackFull.ttf.mybackup': Permission denied
+cp: cannot create regular file `/tmp/FILES/pstricks-doc.pdf.mybackup': Permission denied
+cp: cannot create regular file `/tmp/FILES/pst-mirror-doc.pdf.mybackup': Permission denied
+cp: cannot create regular file `/tmp/FILES/com.ibm.icu-4.4.jar.mybackup.mybackup': Permission denied
+cp: cannot create regular file `/tmp/FILES/pstricks-doc.pdf.mybackup.mybackup': Permission denied
+m26414010@debian7:~$
