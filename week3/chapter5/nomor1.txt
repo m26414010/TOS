@@ -1,0 +1,18 @@
+dennis@dennis-VirtualBox:~$ ls
+bashrc   Documents  etc               Music     projects  Templates  Videos
+Desktop  Downloads  examples.desktop  Pictures  Public    tmp
+dennis@dennis-VirtualBox:~$ man cp
+
+[2]+  Stopped                 man cp
+dennis@dennis-VirtualBox:~$ man vi
+
+[3]+  Stopped                 man vi
+dennis@dennis-VirtualBox:~$ cp /etc/services /tmp
+dennis@dennis-VirtualBox:~$ vi /tmp/services 
+
+[4]+  Stopped                 vi /tmp/services
+
+//before------------------------------
+http            80/tcp          www             # WorldWideWeb HTTP
+//after
+http 80/tcp www # World Wide Web HTTP
