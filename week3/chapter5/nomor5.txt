@@ -1,0 +1,11 @@
+m26414010@debian7:~$ mkdir $HOME/TEST
+m26414010@debian7:~$ touch $HOME/TEST/{one,two,three}
+m26414010@debian7:~$ chmod 777 $HOME/TEST/{one,two,three}
+m26414010@debian7:~$ find $HOME -perm -002 -type f -ls
+5277728    4 -rwxrwxrwx   1 m26414010 m26414010       59 Mar  8 10:17 /home/m26414010/python/fruits.txt
+5277729    4 -rwxrwxrwx   1 m26414010 m26414010      118 Mar  8 10:22 /home/m26414010/python/fruit.py
+5277727    4 -rwxrwxrwx   1 m26414010 m26414010      214 Mar  8 10:14 /home/m26414010/python/interest.py
+5281768    0 -rwxrwxrwx   1 m26414010 m26414010        0 Mar 29 08:09 /home/m26414010/TEST/two
+5281767    0 -rwxrwxrwx   1 m26414010 m26414010        0 Mar 29 08:09 /home/m26414010/TEST/one
+5281769    0 -rwxrwxrwx   1 m26414010 m26414010        0 Mar 29 08:09 /home/m26414010/TEST/three
+m26414010@debian7:~$
