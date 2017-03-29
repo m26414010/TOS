@@ -1,0 +1,28 @@
+m26414010@debian7:~$ ps -eo 'pid,user,group,nice,vsz,rss,comm' | less
+  PID USER     GROUP     NI    VSZ   RSS COMMAND
+    1 root     root       0  10656   252 init
+    2 root     root       0      0     0 kthreadd
+    3 root     root       0      0     0 ksoftirqd/0
+    5 root     root       0      0     0 kworker/u:0
+    6 root     root       -      0     0 migration/0
+    7 root     root       -      0     0 watchdog/0
+    8 root     root       -      0     0 migration/1
+   10 root     root       0      0     0 ksoftirqd/1
+   12 root     root       -      0     0 watchdog/1
+   13 root     root     -20      0     0 cpuset
+   14 root     root     -20      0     0 khelper
+   15 root     root       0      0     0 kdevtmpfs
+   16 root     root     -20      0     0 netns
+   17 root     root       0      0     0 sync_supers
+   18 root     root       0      0     0 bdi-default
+   19 root     root     -20      0     0 kintegrityd
+   20 root     root     -20      0     0 kblockd
+   22 root     root       0      0     0 khungtaskd
+   23 root     root       0      0     0 kswapd0
+   24 root     root     -20      0     0 vmstat
+   25 root     root       5      0     0 ksmd
+   26 root     root      19      0     0 khugepaged
+   27 root     root       0      0     0 fsnotify_mark
+   28 root     root     -20      0     0 crypto
+   88 root     root     -20      0     0 mpt_poll_0
+:
