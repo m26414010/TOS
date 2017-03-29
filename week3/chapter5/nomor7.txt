@@ -1,0 +1,9 @@
+
+rmdir: failed to remove `/tmp': Permission denied
+m26414010@debian7:~$ find /usr/share -size +5M -size -10M -exec cp {} /tmp/FILES \;
+cp: cannot create regular file `/tmp/FILES/DroidSansFallbackFull.ttf': Permission denied
+cp: cannot create regular file `/tmp/FILES/com.ibm.icu-4.4.jar': Permission denied
+find: `/usr/share/openfire': Permission denied
+cp: cannot create regular file `/tmp/FILES/pstricks-doc.pdf': Permission denied
+cp: cannot create regular file `/tmp/FILES/pst-mirror-doc.pdf': Permission denied
+m26414010@debian7:~$
