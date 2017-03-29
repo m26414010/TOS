@@ -1,1 +1,1 @@
-m26414010@debian7:~$ gedit&
+dennis@dennis-VirtualBox:~$ gedit &
