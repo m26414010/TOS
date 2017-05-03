@@ -1,0 +1,135 @@
+m26414010@debian7:~$ pstree
+init-+-2*[apache2---10*[apache2]]
+     |-3*[cron---sh---php]
+     |-2*[sshd-+-sshd---bash]
+     |         |-sshd]
+     |         |-sshd---sshd]
+     |         |-sshd---sshd---bash---pstree]
+     |         |-14*[sshd---sshd---bash]]
+     |         |-sshd---sshd---bash---grep]
+     |         |-sshd---sshd---bash---bash---vim]
+     |         `-sshd---sshd---bash-+-grep]
+     |                              |-5*[less]]
+     |                              |-nano]
+     |                              `-2*[top]]
+     |-bash-+-grep
+     |      |-less
+     |      |-nano
+     |      `-top
+     |-bash---pstree
+     |-acpid
+     |-atd
+     |-console-kit-dae---64*[{console-kit-dae}]
+     |-cron
+     |-daemon---mpt-statusd---sleep
+     |-dbus-daemon
+     |-dnsmasq
+     |-dovecot-+-anvil
+     |         `-log
+     |-6*[getty]
+     |-java---19*[{java}]
+     |-java---72*[{java}]
+     |-mongod---8*[{mongod}]
+     |-mysqld_safe-+-logger
+     |             `-mysqld---25*[{mysqld}]
+     |-nmbd
+     |-ntpd
+     |-ping
+     |-polkitd---{polkitd}
+     |-postgres---4*[postgres]
+     |-proftpd
+     |-rpc.idmapd
+     |-rpc.statd
+     |-rpcbind
+     |-rsyslogd---3*[{rsyslogd}]
+     |-runsvdir---runsv-+-git-daemon
+     |                  `-svlogd
+     |-screen---bash-+-git---editor
+     |               |-2*[grep]
+     |               |-3*[man---pager]
+     |               |-wall
+     |               `-3*[write]
+     |-5*[screen---bash]
+     |-screen---2*[bash]
+     |-screen-+-bash
+     |        `-bash---vi
+     |-screen---bash---pico
+     |-sendmail-mta
+     |-smbd---smbd
+     |-23*[ssh-agent]
+     `-udevd---2*[udevd]
+m26414010@debian7:~$ free
+             total       used       free     shared    buffers     cached
+Mem:       2061128    1648328     412800          0     427756     236888
+-/+ buffers/cache:     983684    1077444
+Swap:      4191228     345152    3846076
+m26414010@debian7:~$ w
+ 08:51:41 up 209 days, 56 min, 18 users,  load average: 0.34, 0.95, 0.82
+USER     TTY      FROM             LOGIN@   IDLE   JCPU   PCPU WHAT
+m2641502 pts/2    192.168.87.216   07:34    1.00s  0.65s  0.02s sshd: m2641502
+m2641516 pts/3    203.189.120.56   07:42   59.00s  0.33s  0.01s sshd: m2641516
+m2641506 pts/5    192.168.87.217   07:46   18.00s  0.22s  0.22s -bash
+m2641500 pts/6    203.189.120.56   07:47    5.00s  0.19s  0.19s -bash
+m2641502 pts/7    192.168.87.211   07:48    8.00s  0.32s  0.01s sshd: m2641502
+m2641511 pts/8    192.168.87.214   07:48    1:21   0.17s  0.17s -bash
+m2641312 pts/9    192.168.87.228   08:17   33:42   0.14s  0.14s -bash
+inyoot   pts/10   203.189.120.56   08:01    5.00s  0.49s  0.49s -bash
+m2641513 pts/11   203.189.120.56   07:51    2.00s  0.28s  0.28s -bash
+m2641401 pts/12   192.168.87.223   08:20    1:17   0.92s  0.19s -bash
+m2641314 pts/13   192.168.87.221   07:54   38:48   0.15s  0.15s -bash
+m2641312 pts/16   192.168.87.222   07:55   49.00s  0.29s  0.29s -bash
+m2641508 pts/17   192.168.87.215   07:57   36:27   0.30s  0.11s bash
+m2641507 pts/18   203.189.120.56   07:58   16.00s  0.41s  0.41s -bash
+m2641316 pts/19   192.168.87.220   07:59   19:24   0.30s  0.30s -bash
+m2641506 pts/22   192.168.87.209   08:11   58.00s  0.30s  0.30s -bash
+m2641411 pts/23   192.168.87.206   08:14   19:07   0.14s  0.14s -bash
+m2641316 pts/4    192.168.87.220   07:44   52:30   0.15s  0.00s grep Mhz/proc/
+m26414010@debian7:~$ who
+m26414010 pts/2        Mar 29 07:34 (192.168.87.216)
+m26415169 pts/3        Mar 29 07:42 (203.189.120.56)
+m26415067 pts/5        Mar 29 07:46 (192.168.87.217)
+m26415002 pts/6        Mar 29 07:47 (203.189.120.56)
+m26415027 pts/7        Mar 29 07:48 (192.168.87.211)
+m26415115 pts/8        Mar 29 07:48 (192.168.87.214)
+m26413121 pts/9        Mar 29 08:17 (192.168.87.228)
+inyoot   pts/10       Mar 29 08:01 (203.189.120.56)
+m26415135 pts/11       Mar 29 07:51 (203.189.120.56)
+m26414010 pts/12       Mar 29 08:20 (192.168.87.223)
+m26413142 pts/13       Mar 29 07:54 (192.168.87.221)
+m26413126 pts/16       Mar 29 07:55 (192.168.87.222)
+m26415082 pts/17       Mar 29 07:57 (192.168.87.215)
+m26415070 pts/18       Mar 29 07:58 (203.189.120.56)
+m26413168 pts/19       Mar 29 07:59 (192.168.87.220)
+m26415060 pts/22       Mar 29 08:11 (192.168.87.209)
+m26414117 pts/23       Mar 29 08:14 (192.168.87.206)
+m26413168 pts/4        Mar 29 07:44 (192.168.87.220)
+m26414010@debian7:~$ finger
+Login     Name                   Tty      Idle  Login Time   Office     Office Phone
+inyoot    Iwan Nyoto             pts/10         Mar 29 08:01 (203.189.120.56)
+m26413121 Ignatius Dwihan P      pts/9      34  Mar 29 08:17 (192.168.87.228)
+m26413126 bryan                  pts/16      1  Mar 29 07:55 (192.168.87.222)
+m26413142 Maria Alvinna          pts/13     39  Mar 29 07:54 (192.168.87.221)
+m26413168 Theodorus Natanael     pts/19     19  Mar 29 07:59 (192.168.87.220)
+m26413168 Theodorus Natanael     pts/4      52  Mar 29 07:44 (192.168.87.220)
+m26414010                        pts/12      1  Mar 29 08:20 (192.168.87.223)
+m26414117                        pts/23     19  Mar 29 08:14 (192.168.87.206)
+m26415002 MELINDA CHRISTY ROEDY  pts/6          Mar 29 07:47 (203.189.120.56)
+m26414010                        pts/2          Mar 29 07:34 (192.168.87.216)
+m26415027                        pts/7          Mar 29 07:48 (192.168.87.211)
+m26415060                        pts/22      1  Mar 29 08:11 (192.168.87.209)
+m26415067                        pts/5          Mar 29 07:46 (192.168.87.217)
+m26415070                        pts/18         Mar 29 07:58 (203.189.120.56)
+m26415082                        pts/17     36  Mar 29 07:57 (192.168.87.215)
+m26415115                        pts/8          Mar 29 07:48 (192.168.87.214)
+m26415135                        pts/11         Mar 29 07:51 (203.189.120.56)
+m26415169                        pts/3       1  Mar 29 07:42 (203.189.120.56)
+m26414010@debian7:~$ whoami
+m26414010
+m26414010@debian7:~$ lsattr
+-------------e-- ./python
+-------------e-- ./public_html
+-------------e-- ./m26414010
+m26414010@debian7:~$ touch file.txt
+m26414010@debian7:~$ mkdir testfile
+m26414010@debian7:~$ mv file.txt testfile
+m26414010@debian7:~$ rm -rf testfile
