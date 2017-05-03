@@ -1,0 +1,3 @@
+m26414010@debian7:~$ echo `date +%a,' '%b' '%Y' '%X' '%z | tr '\n\r' ' '` '=>' `/sbin/ifconfig | grep 'inet addr:' | cut -d ':' -f2 | cut -d ' ' -f1 | sort | xargs echo` >> hasil.txt
+
+m26414010@debian7:~$ cat hasil.txt
