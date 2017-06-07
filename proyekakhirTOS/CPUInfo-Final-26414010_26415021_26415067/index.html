@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="static/jquery.min.js"></script>
+	<script src="static/Chart.bundle.js"></script>
+	<script src="static/smooth.js"></script>
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+
+	<style>
+		table{
+			text-align: center;
+			border: 0.1em solid black;
+		}
+
+		td{
+			border-left: 0.1em solid black;
+		}
+
+		.head{
+			font-size: 18px;
+			font-weight: bold;
+			border: 0.2em solid black;
+		}
+
+	</style>
+</head>
+<body>
+<div class="panel panel-default panel-primary">
+	<div class="panel-heading">
+		<h2>Server Information</h2>
+	</div>
+	<div class="panel-body" style="font-size: 16px">
+		<div class="cpu-inf"></div>
+		<div class="mem-inf"></div>
+		<div class="os-inf"></div>
+	</div>
+</div>
+<br>
+	<table class="table table-hover">
+		<tr class="head">
+			<td>Time Stamp</td>
+			<td>Memory Usage (GB)</td>
+			<td>Memory Usage (%)</td>
+			<td>CPU Usage (%)</td>
+		</tr>
+		<tr class="list">
+			<td class="time"></td>
+			<td class="mem"></td>
+			<td class="mp"></td>
+			<td class="cpu"></td>
+		</tr>
+		<tr class="list">
+			<td class="time"></td>
+			<td class="mem"></td>
+			<td class="mp"></td>
+			<td class="cpu"></td>
+		</tr>
+		<tr class="list">
+			<td class="time"></td>
+			<td class="mem"></td>
+			<td class="mp"></td>
+			<td class="cpu"></td>
+		</tr>
+		<tr class="list">
+			<td class="time"></td>
+			<td class="mem"></td>
+			<td class="mp"></td>
+			<td class="cpu"></td>
+		</tr>
+		<tr class="list">
+			<td class="time"></td>
+			<td class="mem"></td>
+			<td class="mp"></td>
+			<td class="cpu"></td>
+		</tr>
+		<tr class="list">
+			<td class="time"></td>
+			<td class="mem"></td>
+			<td class="mp"></td>
+			<td class="cpu"></td>
+		</tr>
+		<tr class="list">
+			<td class="time"></td>
+			<td class="mem"></td>
+			<td class="mp"></td>
+			<td class="cpu"></td>
+		</tr>
+		<tr class="list">
+			<td class="time"></td>
+			<td class="mem"></td>
+			<td class="mp"></td>
+			<td class="cpu"></td>
+		</tr>
+		<tr class="list">
+			<td class="time"></td>
+			<td class="mem"></td>
+			<td class="mp"></td>
+			<td class="cpu"></td>
+		</tr>
+		<tr class="list" style="background-color: #5FF55F; font-weight:bold">
+			<td class="time"></td>
+			<td class="mem"></td>
+			<td class="mp"></td>
+			<td class="cpu"></td>
+		</tr>
+	</table>
+<br>
+
+<div class="panel panel-success">
+	<div class="panel-heading">
+		<h2>Usage Threshold</h2>
+	</div>
+	<br>
+	<form method="POST" class="form-inline" >
+		<div class="form-group" style="margin-left: 50px">
+			<label for="CPU">Input CPU Limiter:</label>
+    		<input type="text" class="form-control" id="CPU">
+		</div>
+
+		<div class="form-group" style="margin-left: 50px">
+			<label for="Mem">Input Memory Limiter:</label>
+    		<input type="text" class="form-control" id="Mem">
+		</div>
+
+		<div class="form-group" style="margin-left: 50px">
+			<label for="Rec">Input Warning Receiver:</label>
+    		<input type="text" class="form-control" id="Rec">
+		</div>
+	</form>
+	<br>
+		<div class="form-group" style="margin-left: 50px">
+			<label for="CPU">Current CPU Limiter:</label>
+    		<input type="text" class="form-control" id="CurrCPU" readonly>
+		</div>
+
+		<div class="form-group" style="margin-left: 50px">
+			<label for="Mem">Current Memory Limiter:</label>
+    		<input type="text" class="form-control" id="CurrMem" readonly>
+		</div>
+
+		<div class="form-group" style="margin-left: 50px">
+			<label for="rec">Current Warning Receiver:</label>
+    		<input type="text" class="form-control" id="CurrRec" readonly>
+		</div>
+	<br>
+
+	<div class="panel panel-warning">
+		<div class="panel-heading">
+			<h2>Bar Chart Representation</h2>
+		</div>
+		<div class="panel-body">
+			<div id="container" style="width: 75%; margin: auto; margin-top: 5%">
+				<canvas id="canvas"></canvas>
+			</div>
+		</div>
+		<section style="height: 200px"></section>
+	</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+$("#CPU, #Mem").keyup(function(event){
+	if(event.keyCode == 13){
+		SetLimit($(this).val(), $(this).attr('id'));
+	}
+});
+
+function SetLimit(value, type){
+	$.ajax({
+		url: 'Set'+type+'Limit',
+		type: 'POST',
+		async: true,
+		data: {limit: value},
+		success: function(response){
+			result = $.parseJSON(response);
+			$("#"+type).val("");
+			$("#Curr"+type).val(result.limit);
+			$("#Curr"+type).fadeOut(400).fadeIn(300);
+		}
+	});
+}
+
+$("#Rec").keyup(function(event){
+	if(event.keyCode == 13){
+		SetReceiver($(this).val());
+	}
+});
+
+function SetReceiver(value){
+	$.ajax({
+		url: 'SetReceiver',
+		type: 'POST',
+		async: true,
+		data: {addr: value},
+		success: function(response){
+			result = $.parseJSON(response);
+			$("#Rec").val("");
+			$("#CurrRec").val(result.addr);
+			$("#CurrRec").fadeOut(400).fadeIn(300);
+		}
+	});
+}
+
+$(document).ready(function(){
+	SetLimit(50,"CPU");
+	SetLimit(50,"Mem");
+	SetReceiver('m26414035@john.petra.ac.id');
+
+	var barChartData;
+
+	var Refresh = function() {
+		var json;
+		$.ajax({
+			url: 'PassData',
+			type: 'POST',
+			async: true,
+			success: function(response){
+				json = $.parseJSON(response);
+				var labels = [];
+				var mems = [];
+				var cpus = [];
+				for(var i = 0; i < json.length; i++){
+					$(".mem:eq("+i+")").html(json[i].mem);
+					$(".mp:eq("+i+")").html(json[i].mpercent);
+					$(".cpu:eq("+i+")").html(json[i].cpu);
+					$(".time:eq("+i+")").html(json[i].time);
+					labels[i] = json[i].time;
+					mems[i] = json[i].mpercent;
+					cpus[i] = json[i].cpu;
+				}
+				for(var i = json.length; i < 10; i++){
+					$(".mem:eq("+i+")").html("");
+					$(".mp:eq("+i+")").html("");
+					$(".cpu:eq("+i+")").html("");
+					$(".time:eq("+i+")").html("");
+				}
+				$(".list:eq("+(json.length-1)+")").fadeOut(400).fadeIn(300);
+				barChartData = {
+					labels: labels,
+					datasets: [{
+						label: 'Memory',
+						backgroundColor: "rgba(220,220,220,0.5)",
+						data: mems
+					},{
+						label: 'CPU',
+						backgroundColor: "rgba(151,187,205,0.5)",
+						data: cpus
+					}]
+				}
+				LoadChart(barChartData);
+			}
+		})
+	}
+	Refresh();
+	var refreshInterval = 1000 * 5;
+	setInterval(function(){
+		Refresh();
+	}, refreshInterval);
+
+
+	var GetSystemInfo = function(){
+		var json;
+		$.ajax({
+			url: 'PassSystemInfo',
+			type: 'POST',
+			async: true,
+			success: function(response){
+				json = $.parseJSON(response);
+				$(".cpu-inf").html("Processor: " + json.cpu);
+				$(".mem-inf").html("RAM: " + json.memory + " GB");
+				$(".os-inf").html("OS: " + json.os);
+			}
+		});
+	}
+	GetSystemInfo();
+	var systemInterval = 1000 * 3600 * 24;
+	setInterval(function(){
+		GetSystemInfo();
+	}, systemInterval);
+
+});
+
+function LoadChart(barChartData){
+	var ctx = document.getElementById("canvas").getContext("2d");
+	window.myBar = new Chart(ctx, {
+		type: 'bar',
+		data: barChartData,
+		options: {
+			// Elements options apply to all of the options unless overridden in a dataset
+			// In this case, we are setting the border of each bar to be 2px wide and green
+			elements: {
+				rectangle: {
+					borderWidth: 2,
+					borderColor: 'rgb(0, 255, 0)',
+					borderSkipped: 'bottom'
+				}
+			},
+			responsive: true,
+			legend: {
+				position: 'top',
+			},
+			title: {
+				display: true,
+				text: 'Memory & CPU Usage By Refresh Time'
+			}
+		}
+	});
+}
+
+</script>
+</html>
